@@ -1,0 +1,134 @@
+<html>
+
+
+<head>
+    <title>Wifi info</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"
+        integrity="sha512-GCiwmzA0bNGVsp1otzTJ4LWQT2jjGJENLGyLlerlzckNI30moi2EQT0AfRI7fLYYYDKR+7hnuh35r3y1uJzugw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <!-- main -->
+        
+        
+        <div class="empty" style="display: none;">
+            <h1>No wifi found</h1>
+            <p>Please check your wifi connection. Make sure it is turned on and you are using Linux.</p>
+
+        </div>
+
+        <div class="empty" style="display: block;">
+            <h1>Loading..</h1>
+        </div>
+
+        <div class="main" style="display: none;">
+            <div class="wifi-list card">
+            </div>
+
+            <div class="wifi-details">
+
+                <div class="wifi-ssid">ssid1</div>
+
+
+                <div class="wifi-details-row">
+
+                    <div class="wifi-quality card">
+                        <div class="title">Quality</div>
+                        <div class="value">29/70</div>
+                        <div class="widget"><canvas id="quality-chart"></canvas></div>
+                    </div>
+                    <div class="wifi-signal card">
+                        <div class="title">Signal</div>
+                        <div class="value">-50 dBm</div>
+                        <div class="widget"><canvas id="strength-chart"></canvas></div>
+                    </div>
+
+                    <div class="wifi-freuency card">
+                        <div class="title">Frequency</div>
+                        <div class="value">2.4 GHz</div>
+                    </div>
+                </div>
+
+		    <div id="datetime"></div>
+		    
+		    <div class="tabs">
+  <div class="tab active" data-tab="reports">Reports</div>
+  <div class="tab" data-tab="settings">Settings</div>
+  <div class="tab" data-tab="signal-strength">Signal Strength</div>
+  <div class="tab" data-tab="bandwidth">Bandwidth</div>
+  <div class="tab-content active" data-tab-content="reports">
+    <!-- Insert your reports content here -->
+  </div>
+  <div class="tab-content" data-tab-content="settings">
+    <!-- Insert your settings content here -->
+  </div>
+  <div class="tab-content" data-tab-content="signal-strength">
+    <!-- Insert your signal strength content here -->
+  </div>
+  <div class="tab-content" data-tab-content="bandwidth">
+    <!-- Insert your bandwidth content here -->
+  </div>
+</div>
+
+  	
+
+
+
+                <div class="wifi-details-row space-ar">
+                    <div class="wifi-details-col">
+                        <div class="wifi-bitrate card">
+                            <div class="title">Bitrates</div>
+                            <div class="value">
+                                <canvas id="bitrate-chart"></canvas>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="wifi-details-col">
+                        <div class="wifi-details-row">
+                            <div class="refresh-timer card">
+                                <div class="title">Refresh timer</div>
+                                <div id="timer" class="value"></div>
+                            </div>
+                        </div>
+                        <div class="wifi-details-row">
+                            <div class="wifi-security card">
+                                <div class="title">Security</div>
+                                <div class="value">encrypted</div>
+                            </div>
+                            <div class="wifi-channel card">
+                                <div class="title">Channel</div>
+                                <div class="value">6</div>
+                            </div>
+                        </div>
+
+                        <div class="wifi-details-row">
+
+                            <div class="wifi-mode card">
+                                <div class="title">Mode</div>
+                                <div class="value">Master</div>
+                            </div>
+                            <div class="wifi-address card">
+                                <div class="title">Address</div>
+                                <div class="value">00:00:00:00:00:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="style.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
