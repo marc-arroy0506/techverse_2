@@ -1,0 +1,4 @@
+flask==2.2.3
+wifi==0.3.8
+threading
+webbrowser
