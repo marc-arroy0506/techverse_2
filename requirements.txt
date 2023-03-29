@@ -1,4 +1,4 @@
 flask==2.2.3
 wifi==0.3.8
-threading
-webbrowser
+threading==3.7
+webbrowser==2.1.3
